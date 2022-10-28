@@ -11,7 +11,7 @@ architecture Behavioral of TB_Riconoscitore_1001 is
                 RST  : in std_logic;
                 modo : in std_logic;
                 i   : in std_logic;
-                y : out std_logic;
+                y : out std_logic
         );
     end component;
 
@@ -24,7 +24,7 @@ architecture Behavioral of TB_Riconoscitore_1001 is
     signal uscita : std_logic;
 
 
-    constant CLK_period : time : 10 ns;
+    constant CLK_period : time := 10 ns;
 
 begin
     test_riconoscitore: Riconoscitore_1001
@@ -53,7 +53,7 @@ begin
 
     begin
         
-        wait 100 ns;
+        wait for 100 ns;
         -- test 0 Modo = 0 sequenza valdia
         
         m <= '0';
